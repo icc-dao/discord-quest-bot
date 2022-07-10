@@ -1,0 +1,11 @@
+
+version: '3.4'
+
+services:
+  iccd-questbot:
+    image: iccd-questbot
+    build:
+      context: .
+      dockerfile: src/ICCD.QuestBot/Dockerfile
+    environment:
+      - "ICCD_TOKEN=${BOT_TOKEN:?}"
